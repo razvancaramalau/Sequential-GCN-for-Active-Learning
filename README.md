@@ -9,3 +9,9 @@ python main.py # it will start the AL framework for CIFAR-10 on UncertainGCN met
 
 Please have a look over the config file before running. Also, check the args of the code.
 CUDA-GPU implementation, not tested on CPU. Different random seed might produce different results.
+
+# Active Learning methods implemented:
+Active Learning for Convolutional Neural Networks: A Core-Set Approach: https://arxiv.org/pdf/1708.00489.pdf
+Learning Loss for Active Learning: https://arxiv.org/pdf/1905.03677.pdf
+Variational Adversial Active Learning: https://arxiv.org/pdf/1904.00370.pdf
+
