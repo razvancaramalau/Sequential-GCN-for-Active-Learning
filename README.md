@@ -15,6 +15,8 @@ CUDA-GPU implementation, not tested on CPU. Different random seed might produce 
 
 ## Active Learning methods implemented:
 Active Learning for Convolutional Neural Networks: A Core-Set Approach: https://arxiv.org/pdf/1708.00489.pdf
+
 Learning Loss for Active Learning: https://arxiv.org/pdf/1905.03677.pdf
+
 Variational Adversial Active Learning: https://arxiv.org/pdf/1904.00370.pdf
 
