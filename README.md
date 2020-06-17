@@ -1,8 +1,10 @@
 # Sequential-GCN-for-Active-Learning
 ## Requirements:
 python 3.6+
+
 torch 1.0+
-pip3 libraries: tqdm, sklearn, scipy, math
+
+pip libraries: tqdm, sklearn, scipy, math
 
 ## Run:
 ```bash 
