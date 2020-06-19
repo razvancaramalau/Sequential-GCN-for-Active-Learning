@@ -1,5 +1,5 @@
 # Sequential GCN for Active Learning
-[Link to paper](https://arxiv.org/pdf/2006.10219.pdf)
+[Link to paper.](https://arxiv.org/pdf/2006.10219.pdf)
 ## Requirements:
 python 3.6+
 
