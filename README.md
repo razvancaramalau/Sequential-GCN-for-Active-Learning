@@ -8,11 +8,11 @@ torch 1.0+
 pip libraries: tqdm, sklearn, scipy, math
 
 ## Run:
-For running UncertainGCN on CIFAR-10 over 5 sampling stages of 1000 images:
+For running **UncertainGCN** on CIFAR-10 over 5 sampling stages of 1000 images:
 ```bash 
 python main.py -m UncertainGCN -d cifar10 -c 5 # Other available datasets cifar100, fashionmnist, svhn
 ```
-CoreGCN The geometric method that uses GCN training can be run as:
+**CoreGCN**, the geometric method that uses GCN training, can be run as:
 ```bash 
 python main.py -m CoreGCN -d cifar10 -c 5 # Other AL methods: Random, VAAL, CoreSet, lloss
 ```
