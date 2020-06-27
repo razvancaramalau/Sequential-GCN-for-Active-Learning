@@ -147,10 +147,7 @@ def train_vaal(models, optimizers, labeled_dataloader, unlabeled_dataloader, cyc
                     labels = labels.cuda()
             if iter_count % 100 == 0:
                 print("Iteration: " + str(iter_count) + "  vae_loss: " + str(total_vae_loss.item()) + " dsc_loss: " +str(dsc_loss.item()))
-#
-def entropy(p, dim = -1, keepdim = None):
-   return torch.sum(-torch.where(p > 0, p * p.log(), p.new([0.0])), dim=dim) # can be a scalar, when PyTorch.supports it
-
+                
 def get_uncertainty(models, unlabeled_loader):
     models['backbone'].eval()
     models['module'].eval()
@@ -163,7 +160,6 @@ def get_uncertainty(models, unlabeled_loader):
                 inputs = inputs.cuda()
             _, _, features = models['backbone'](inputs)
             pred_loss = models['module'](features) # pred_loss = criterion(scores, labels) # ground truth loss
-            pred_loss = entropy(pred_loss)
             pred_loss = pred_loss.view(pred_loss.size(0))
             uncertainty = torch.cat((uncertainty, pred_loss), 0)
     
