@@ -276,7 +276,7 @@ def query_samples(model, method, data_unlabeled, subset, labeled_set, cycle, arg
                                     sampler=SubsetSequentialSampler(subset+labeled_set), # more convenient if we maintain the order of subset
                                     pin_memory=True)
 
-        arg = get_kcg(models, ADDENDUM*(cycle+1), unlabeled_loader)
+        arg = get_kcg(model, ADDENDUM*(cycle+1), unlabeled_loader)
 
     if method == 'lloss':
         # Create unlabeled dataloader for the unlabeled subset
