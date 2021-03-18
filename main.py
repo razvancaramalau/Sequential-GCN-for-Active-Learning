@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
         # Load training and testing dataset
         data_train, data_unlabeled, data_test, adden, NO_CLASSES, no_train = load_dataset(args.dataset)
-        ADDENDUM = adden
+        # Don't predefine budget size. Configure it in the config.py: ADDENDUM = adden
         NUM_TRAIN = no_train
         indices = list(range(NUM_TRAIN))
         random.shuffle(indices)
