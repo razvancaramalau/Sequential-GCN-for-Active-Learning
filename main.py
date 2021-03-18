@@ -142,8 +142,6 @@ if __name__ == '__main__':
             arg = query_samples(models, method, data_unlabeled, subset, labeled_set, cycle, args)
 
             # Update the labeled dataset and the unlabeled dataset, respectively
-            new_list = list(torch.tensor(subset)[arg][:ADDENDUM].numpy())
-            # print(len(new_list), min(new_list), max(new_list))
             labeled_set += list(torch.tensor(subset)[arg][-ADDENDUM:].numpy())
             listd = list(torch.tensor(subset)[arg][:-ADDENDUM].numpy()) 
             unlabeled_set = listd + unlabeled_set[SUBSET:]
