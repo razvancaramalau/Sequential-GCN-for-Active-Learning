@@ -247,7 +247,7 @@ def query_samples(model, method, data_unlabeled, subset, labeled_set, cycle, arg
             scores, _, feat = models['gcn_module'](inputs, adj)
             
             if method == "CoreGCN":
-                feat = features.detach().cpu().numpy()
+                feat = feat.detach().cpu().numpy()
                 new_av_idx = np.arange(SUBSET,(SUBSET + (cycle+1)*ADDENDUM))
                 sampling2 = kCenterGreedy(feat)  
                 batch2 = sampling2.select_batch_(new_av_idx, ADDENDUM)
