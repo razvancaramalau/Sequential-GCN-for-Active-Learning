@@ -103,8 +103,10 @@ if __name__ == '__main__':
                     #resnet18    = vgg11().cuda() 
                     resnet18    = resnet.ResNet18(num_classes=NO_CLASSES).cuda()
                 if method == 'lloss':
-                    #loss_module = LossNet(feature_sizes=[16,8,4,2], num_channels=[128,128,256,512]).cuda()
-                    loss_module = LossNet().cuda()
+                    if args.dataset == "fashionmnist":
+                      loss_module = LossNet(feature_sizes=[28,14,7,4], num_channels=[64,128,256,512]).cuda()
+                    else:
+                      loss_module = LossNet().cuda()
 
             models      = {'backbone': resnet18}
             if method =='lloss':
